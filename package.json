@@ -1,0 +1,69 @@
+{
+  "name": "@dragoscv/firestore-stripe-payments",
+  "version": "0.0.8",
+  "description": "Forked. Client SDK for the firestore-stripe-payments Firebase Extension",
+  "main": "./lib/index.js",
+  "typings": "./lib/index.d.ts",
+  "scripts": {
+    "api-documenter": "api-documenter markdown --input-folder temp --output-folder markdown",
+    "api-extractor": "api-extractor run --verbose",
+    "api-extractor:local": "npm run build && api-extractor run --local --verbose",
+    "build": "tsc",
+    "postbuild": "node ./postbuild.js",
+    "test": "cd _emulator && firebase emulators:exec --project=demo-test 'NODE_OPTIONS=--openssl-legacy-provider npm run test:unit' && exit 0",
+    "test:unit": "karma start --single-run",
+    "update:all": "npx npm-check-updates -u && npm i"
+  },
+  "keywords": [
+    "firebase",
+    "payments",
+    "subscriptions",
+    "stripe"
+  ],
+  "author": "Stripe (https://stripe.com/)",
+  "contributors": [
+    "Firebase <firebase-support@google.com> (https://firebase.google.com/)",
+    "Dragos Catalin <dragoscv12@gmailcom> (https://dragoscatalin.ro/)"
+  ],
+  "license": "Apache-2.0",
+  "files": [
+    "lib/",
+    "LICENSE",
+    "NOTICE.txt",
+    "README.md"
+  ],
+  "devDependencies": {
+    "@microsoft/api-documenter": "^7.24.3",
+    "@microsoft/api-extractor": "^7.43.2",
+    "@types/chai": "^4.3.16",
+    "@types/chai-as-promised": "^7.1.8",
+    "@types/chai-like": "^1.1.3",
+    "@types/mocha": "^10.0.6",
+    "@types/sinon": "17.0.3",
+    "@types/sinon-chai": "^3.2.12",
+    "chai": "^4.3.4",
+    "chai-as-promised": "^7.1.1",
+    "chai-like": "^1.1.1",
+    "firebase-tools": "^13.8.0",
+    "mocha": "^10.4.0",
+    "karma": "^6.4.3",
+    "karma-mocha": "^2.0.1",
+    "karma-mocha-reporter": "^2.2.5",
+    "karma-webpack": "^5.0.1",
+    "karma-sourcemap-loader": "^0.4.0",
+    "karma-chrome-launcher": "^3.2.0",
+    "webpack": "^5.91.0",
+    "source-map-loader": "^5.0.0",
+    "replace-in-file": "^7.1.0",
+    "sinon": "^17.0.1",
+    "sinon-chai": "^3.7.0",
+    "ts-node": "^10.9.2",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@firebase/app": "^0.10.2",
+    "@firebase/auth": "^1.7.2",
+    "@firebase/firestore": "^4.6.1"
+  }
+}
