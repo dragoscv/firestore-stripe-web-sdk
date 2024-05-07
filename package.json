@@ -1,5 +1,5 @@
 {
-  "name": "@dragoscv/firestore-stripe-payments",
+  "name": "@dragoscatalin/firestore-stripe-payments",
   "version": "0.0.8",
   "description": "Client SDK for the firestore-stripe-payments Firebase Extension. Forked",
   "main": "./lib/index.js",
